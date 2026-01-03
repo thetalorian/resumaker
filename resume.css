@@ -1,0 +1,59 @@
+.body {
+  font-size: 10;
+}
+
+.section {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.workhistory {
+  padding-bottom: 10px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.company {
+  font-size: 1.2rem;
+}
+
+.company-name {
+  font-style: italic;
+}
+
+.workperiod {
+  padding-left: 5px;
+}
+
+.container {
+  display: flex; /* Enables flexbox layout for children */
+  gap: 20px; /* Adds space between columns */
+}
+
+.column-main {
+  flex: 2;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.column-side {
+  flex: 1; /* Takes 3 parts of available space (e.g., 75%) */
+  background-color: #eee;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Stacks columns vertically on small screens */
+  }
+}
+
+@media print {
+    @page {
+        size: Letter;
+        margin: 1cm;
+    }
+}

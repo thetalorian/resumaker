@@ -1,0 +1,151 @@
+information:
+  name: Samuel Plum
+  title: DevOps Engineer
+  email: splum@taloria.com
+  phone: 310-347-8393
+  link: illustriouskingdom.com
+  address: |
+    8905 Coberdale Ct.
+    Colorado Springs, CO 80920
+  introduction: |
+    Experienced DevOps Engineer with a strong background in cloud infrastructure, automation, and container orchestration. Skilled in designing scalable, reliable systems using modern tools and practices to optimize deployment pipelines and infrastructure management.
+skills:
+  - category: Scripting and Programming
+    entries:
+      - Python
+      - Javascript
+      - Bash
+      - Java
+      - Perl
+      - C++
+      - C#
+  - category: Infrastructure as Code (IaC)
+    entries:
+      - Terraform
+      - Puppet
+      - CFEngine
+  - category: CI/CD and Related
+    entries:
+      - Git
+      - GitHub
+      - GitHub Actions
+      - GitLab
+      - Argo CD
+      - Azure DevOps
+      - Jenkins
+      - Octopus Deploy
+      - Docker
+      - Packer
+      - Helm
+      - Kustomize
+      - Jira
+      - Confluence
+  - category: Orchestration and Administration
+    entries:
+      - Kubernetes
+      - Apache / Tomcat
+      - Linux Administration
+      - EC2
+  - category: Database and Queue Administration
+    entries:
+      - MySQL
+      - Postgres
+      - CouchBase
+      - RabbitMQ
+      - Redis
+  - category: Monitoring Tools
+    entries:
+      - DataDog
+      - LogicMonitor
+      - Prometheus
+      - Nagios
+  - category: Cloud Environments
+    entries:
+      - AWS
+      - Azure
+      - Rackspace
+      - VSphere
+  - category: Networking
+    entries:
+      - VPC / ELB / Route53
+      - Istio
+      - Netscaler
+      - NetApp NFS
+history:
+  - company: Greenshades Software
+    title: DevOps Engineer
+    start_date: 2023-04-17
+    end_date: 2025-08-01
+    description:
+      - |
+        Led the development and maintenance of deployment pipelines and infrastructure in Azure Cloud, focusing on microservice deployment and infrastructure automation.
+    bullets:
+      - Developed and maintained CI/CD pipelines in Azure DevOps for microservice deployment.
+      - Implemented infrastructure as code using Terraform, managing Azure resources.
+      - Streamlined deployment processes with Octopus Deploy, Argo CD, and Helm charts.
+      - Monitored system health and performance using DataDog and Splunk, ensuring high availability.
+  - company: PayPal Inc / Happy Returns
+    title: MTS 2, Software Engineer - Cloud Infrastructure
+    start_date: 2022-01-05
+    end_date: 2023-04-11
+    description:
+      - |
+        Maintained and improved cloud infrastructure supporting the platform, focusing on high availability, scalability, and automation.
+    bullets:
+      - Managed AWS resources including EC2, RDS, S3, and EKS clusters.
+      - Enhanced infrastructure automation with Terraform, Jenkins, Pulumi, and GitHub Actions.
+      - Led projects such as clustering OpenVPN, deploying monitoring agents via Terraform, and database sharding.
+  - company: ELocal.com
+    title: DevOps Engineer
+    start_date: 2019-06-17
+    end_date: 2021-12-15
+    description:
+        - |
+          Consolidated and modernized deployment pipeline across multiple business units, adopting GitOps principles.
+    bullets:
+        - Unified multiple pipelines into a single system using Kubernetes (EKS) and Terraform.
+        - Implemented GitLab for centralized repository management and CI/CD pipelines.
+        - Deployed Hashicorp Vault for secret management and Istio for service mesh routing.
+        - Enhanced system observability with Prometheus, Kiali, and Grafana.
+  - company: Advertise.com
+    title: Senior Systems Engineer
+    start_date: 2024-01-07
+    end_date: 2019-03-29
+    description:
+      - |
+        Managed a large-scale advertising platform with automation and custom monitoring to ensure high performance.
+    bullets:
+      - Automated system configuration with Puppet and developed custom deployment and verification tools.
+      - Automated documentation and monitoring process, reducing manual effort
+      - Developed custom scripts for system visibility and tested new technologies like RabbitMQ, ELK, and AWS VPC.
+#   - company: Reachlocal.com
+#     title: Systems Administrator (DevOps)
+#     start: 2007
+#     end: 2014
+#     page: 2
+#     description:
+#       - |
+#         Managed maintenance, operation, and deployment for approximately twenty separate proprietary products. Deployments were copied for six datacenters, and over two hundred mostly unique systems. Oversaw installation, configuration, operation, and troubleshooting of Apache and Tomcat servers. Frequent interaction with MySQL servers and data, formulating queries, identifying missing indexes and isolating bad processes.
+# #      - |
+# #        Created and maintained Citrix Netscaler configurations for virtual IPs including creation of virtual servers, system groups, content switching virtual servers, and custom monitors.
+#       - |
+#         Overhauled and expanded CFEngine-based system automation covering application setup and configuration. System was designed to cover minute variations of system configurations. Developed Python scripts to scan live configuration files from our environments and use the collected data to auto-generate the appropriate code to allow Puppet or CFEngine 3 to recreate those configuration files exactly.
+# #      - |
+# #        Performed frequent incident management and root cause analysis to quickly solve problems occuring in both the production and QA environments.
+# #      - |
+# #        Investigated NFS related issues with NetApp appliance including issues with export permissions, root squashing, snapmirror relationships and mount options.
+#       - |
+#         Re-factored our Nagios configuration to simplify administration, reduce false positives, and improve monitoring coverage. Created automated scripts to self-generate site specific Nagios monitors whose existence and thresholds were based on long term data collection.
+#       - |
+education:
+  universities:
+    - name: Oklahoma State University
+      page: 1
+      start: 1997
+      end: 2000
+      major: Computer Science (No Degree)
+  certifications:
+    - name: AWS Cloud Practitioner Certification
+      page: 1
+    - name: Comptia Network+ Certification
+      page: 1
