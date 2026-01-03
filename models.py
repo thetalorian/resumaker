@@ -21,6 +21,19 @@ class SkillSet(BaseModel):
     entries: list[str]
 
 
+class University(BaseModel):
+    name: str
+    start: int
+    end: int
+    major: str
+
+
+class Education(BaseModel):
+    universities: Optional[list[University]] = None
+    certifications: Optional[list[str]] = None
+
+
 class Resume(BaseModel):
     history: list[WorkHistory]
     skills: list[SkillSet]
+    education: Education

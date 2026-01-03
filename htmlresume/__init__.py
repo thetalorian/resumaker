@@ -2,6 +2,7 @@ from .htmlblock import HTMLBlock
 from .htmlsection import HTMLSection
 from .htmlhistory import HTMLHistory
 from .htmlskills import HTMLSkills
+from .htmleducation import HTMLEducation
 from .htmlbody import HTMLBody
 from .htmlhead import HTMLHead
 from .htmlresume import HTMLResume

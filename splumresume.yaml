@@ -140,12 +140,9 @@ history:
 education:
   universities:
     - name: Oklahoma State University
-      page: 1
       start: 1997
       end: 2000
       major: Computer Science (No Degree)
   certifications:
-    - name: AWS Cloud Practitioner Certification
-      page: 1
-    - name: Comptia Network+ Certification
-      page: 1
+    - AWS Cloud Practitioner Certification
+    - Comptia Network+ Certification
