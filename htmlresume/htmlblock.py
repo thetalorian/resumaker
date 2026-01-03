@@ -1,13 +1,18 @@
+from string import Template
 import textwrap
 
 class HTMLBlock():
     def __init__(self, cssClass: str) -> None:
         self.children: list[HTMLBlock] = []
         self.cssClass : str = cssClass
+        self.template : Template = Template(
+"""<div class="$cssClass">
+$content
+</div>""")
 
 
-    def indent(self, input: str) -> str:
-        indent : str = " " * 4
+    def indent(self, input: str, level: int = 1) -> str:
+        indent : str = " " * 4 * level
         return textwrap.indent(input, indent)
 
 
@@ -16,14 +21,15 @@ class HTMLBlock():
 
 
     def childContent(self) -> str:
-        output = ""
+        output = []
         for item in self.children:
-            output += str(item)
-        return output
+            output.append(str(item))
+        return "\n".join(output)
 
 
     def __repr__(self) -> str:
-        output = f"<div class=\"{self.cssClass}\">\n"
-        output += self.childContent()
-        output += f"</div>\n"
+        data = {}
+        data['cssClass'] = self.cssClass
+        data['content'] = self.childContent()
+        output = self.template.substitute(data)
         return self.indent(output)

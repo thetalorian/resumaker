@@ -1,3 +1,4 @@
+from string import Template
 from . import HTMLBlock
 
 class HTMLSection(HTMLBlock):
@@ -5,12 +6,17 @@ class HTMLSection(HTMLBlock):
     def __init__(self, title: str):
         super().__init__("section")
         self.title : str = title
+        self.template = Template(
+"""<div class="section">$title</div>
+<hr>
+<div class="section-content">
+$content
+</div>""")
 
     def __repr__(self) -> str:
-        output = ""
-        output += f"<div class=\"section\">{self.title}</div>\n"
-        output += "<hr>\n"
-        output += "<div class=\"section-content\">\n"
-        output += self.childContent()
-        output += "</div>\n"
+        data = {
+            "title": self.title,
+            "content": self.childContent()
+        }
+        output = self.template.substitute(data)
         return self.indent(output)

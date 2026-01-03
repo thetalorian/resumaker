@@ -1,3 +1,4 @@
+from string import Template
 from models import *
 from . import HTMLHead, HTMLBody
 
@@ -12,12 +13,18 @@ class HTMLResume():
         self.language = "en"
         self.head : HTMLHead = HTMLHead()
         self.body : HTMLBody = HTMLBody(resume)
+        self.template : Template = Template(
+"""<!DOCTYPE html>
+<html lang="$language">
+$head
+$body
+</html>""")
 
 
     def __repr__(self) -> str:
-        output = "<!DOCTYPE html>\n"
-        output += f"<html lang=\"{self.language}\">\n"
-        output += str(self.head)
-        output += str(self.body)
-        output += f"</html>\n"
+        data = {}
+        data['language'] = self.language
+        data['head'] = str(self.head)
+        data['body'] = str(self.body)
+        output = self.template.substitute(data)
         return output

@@ -9,8 +9,7 @@ class HTMLHistory(HTMLBlock):
         super().__init__("history")
         self.history = history
         self.template = Template(
-"""
-<div class="workhistory">
+"""<div class="workhistory">
     <div class="title">$title</div>
     <div class="company">
         <span class="company-name">$company</span> : <span class="workperiod">$workperiod</span>
@@ -18,14 +17,10 @@ class HTMLHistory(HTMLBlock):
     <div class="description">
 $description
     </div>
-    <div class="bullets">
-$bullets
-    </div>
-</div>
-""")
+</div>""")
 
     def __repr__(self) -> str:
-        output = ""
+        output = []
         for item in self.history:
             data = {}
             data['title'] = item.title
@@ -37,14 +32,15 @@ $bullets
                 end = item.end_date.strftime('%m/%d/%Y')
             data['workperiod'] = f"{start} - {end}"
 
-            data['description'] = ""
-            for paragraph in item.description:
-                data['description'] += f"        <p>{paragraph}</p>\n"
-            data['bullets'] = ""
-            if item.bullets:
-                data['bullets'] += "        <ul>\n"
-                for bullet in item.bullets:
-                    data['bullets'] += f"            <li>{bullet}</li>\n"
-                data['bullets'] += "        </ul>"
-            output += self.template.substitute(data)
-        return self.indent(output)
+            description = []
+            if item.description.paragraphs:
+                for paragraph in item.description.paragraphs:
+                    description.append(f"<p>{paragraph}</p>")
+            if item.description.bullets:
+                description.append("<ul>")
+                for bullet in item.description.bullets:
+                    description.append(self.indent(f"<li>{bullet}</li>"))
+                description.append("</ul>")
+            data['description'] = self.indent("\n".join(description), 2)
+            output.append(self.template.substitute(data))
+        return self.indent("\n".join(output))

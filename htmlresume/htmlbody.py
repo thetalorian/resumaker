@@ -1,11 +1,18 @@
+from string import Template
 from models import Resume
-from . import HTMLHeader, HTMLHistory, HTMLBlock, HTMLSection
+from . import HTMLHistory, HTMLBlock, HTMLSection
 
 class HTMLBody(HTMLBlock):
     def __init__(self, resume: Resume):
         super().__init__("body")
         self.data : Resume = resume
+        self.configureLayout()
+        self.template = Template(
+"""<body>
+$content
+</body>""")
 
+    def configureLayout(self):
         # Configure Layout
 
         # Info Header
@@ -31,7 +38,7 @@ class HTMLBody(HTMLBlock):
         # Left column for work history
         contentLeft = HTMLBlock("column-main")
         history = HTMLSection("Professional Experience")
-        history.addChild(HTMLHistory(resume.history))
+        history.addChild(HTMLHistory(self.data.history))
         contentLeft.addChild(history)
         content.addChild(contentLeft)
 
@@ -48,8 +55,6 @@ class HTMLBody(HTMLBlock):
 
 
     def __repr__(self) -> str:
-        output = ""
-        output += "<body>\n"
-        output += self.childContent()
-        output += "</body>\n"
-        return output
+        data = {"content": self.childContent()}
+        output = self.template.substitute(data)
+        return self.indent(output)

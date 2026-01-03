@@ -1,20 +1,22 @@
-class HTMLHead():
+from string import Template
+from . import HTMLBlock
+
+class HTMLHead(HTMLBlock):
     def __init__(self):
         self.title: str = "Resume of Samuel Plum"
         self.meta : dict = {'charset': 'utf-8'}
         self.link: dict = {'href': 'resume.css', 'rel': 'stylesheet'}
+        self.template = Template(
+"""<head>
+    <meta $meta>
+    <link $link>
+    <title $title>
+</head>""")
 
     def __repr__(self) -> str:
-        head = ""
-        head += f"<head>\n"
-        head += f"  <meta"
-        for k,v in self.meta.items():
-            head += f" {k}=\"{v}\""
-        head += ">\n"
-        head += f"  <link"
-        for k,v in self.link.items():
-            head += f" {k}=\"{v}\""
-        head += f">\n"
-        head += f"  <title>{self.title}</title>\n"
-        head += f"</head>\n"
-        return head
+        data = {}
+        data['meta'] = " ".join([f"{k}=\"{v}\"" for k,v in self.meta.items()])
+        data['link'] = " ".join([f"{k}=\"{v}\"" for k,v in self.link.items()])
+        data['title'] = self.title
+        output = self.template.substitute(data)
+        return self.indent(output)

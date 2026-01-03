@@ -77,43 +77,47 @@ history:
     start_date: 2023-04-17
     end_date: 2025-08-01
     description:
-      - Led the development and maintenance of deployment pipelines and infrastructure in Azure Cloud, focusing on microservice deployment and infrastructure automation.
-    bullets:
-      - Developed and maintained CI/CD pipelines in Azure DevOps for microservice deployment.
-      - Implemented infrastructure as code using Terraform, managing Azure resources.
-      - Streamlined deployment processes with Octopus Deploy, Argo CD, and Helm charts.
-      - Monitored system health and performance using DataDog and Splunk, ensuring high availability.
+      paragraphs:
+        - Led the development and maintenance of deployment pipelines and infrastructure in Azure Cloud, focusing on microservice deployment and infrastructure automation.
+      bullets:
+        - Developed and maintained CI/CD pipelines in Azure DevOps for microservice deployment.
+        - Implemented infrastructure as code using Terraform, managing Azure resources.
+        - Streamlined deployment processes with Octopus Deploy, Argo CD, and Helm charts.
+        - Monitored system health and performance using DataDog and Splunk, ensuring high availability.
   - company: PayPal Inc / Happy Returns
     title: MTS 2, Software Engineer - Cloud Infrastructure
     start_date: 2022-01-05
     end_date: 2023-04-11
     description:
-      - Maintained and improved cloud infrastructure supporting the platform, focusing on high availability, scalability, and automation.
-    bullets:
-      - Managed AWS resources including EC2, RDS, S3, and EKS clusters.
-      - Enhanced infrastructure automation with Terraform, Jenkins, Pulumi, and GitHub Actions.
-      - Led projects such as clustering OpenVPN, deploying monitoring agents via Terraform, and database sharding.
+      paragraphs:
+        - Maintained and improved cloud infrastructure supporting the platform, focusing on high availability, scalability, and automation.
+      bullets:
+        - Managed AWS resources including EC2, RDS, S3, and EKS clusters.
+        - Enhanced infrastructure automation with Terraform, Jenkins, Pulumi, and GitHub Actions.
+        - Led projects such as clustering OpenVPN, deploying monitoring agents via Terraform, and database sharding.
   - company: ELocal.com
     title: DevOps Engineer
     start_date: 2019-06-17
     end_date: 2021-12-15
     description:
+      paragraphs:
         - Consolidated and modernized deployment pipeline across multiple business units, adopting GitOps principles.
-    bullets:
-        - Unified multiple pipelines into a single system using Kubernetes (EKS) and Terraform.
-        - Implemented GitLab for centralized repository management and CI/CD pipelines.
-        - Deployed Hashicorp Vault for secret management and Istio for service mesh routing.
-        - Enhanced system observability with Prometheus, Kiali, and Grafana.
+      bullets:
+          - Unified multiple pipelines into a single system using Kubernetes (EKS) and Terraform.
+          - Implemented GitLab for centralized repository management and CI/CD pipelines.
+          - Deployed Hashicorp Vault for secret management and Istio for service mesh routing.
+          - Enhanced system observability with Prometheus, Kiali, and Grafana.
   - company: Advertise.com
     title: Senior Systems Engineer
     start_date: 2024-01-07
     end_date: 2019-03-29
     description:
-      - Managed a large-scale advertising platform with automation and custom monitoring to ensure high performance.
-    bullets:
-      - Automated system configuration with Puppet and developed custom deployment and verification tools.
-      - Automated documentation and monitoring process, reducing manual effort
-      - Developed custom scripts for system visibility and tested new technologies like RabbitMQ, ELK, and AWS VPC.
+      paragraphs:
+        - Managed a large-scale advertising platform with automation and custom monitoring to ensure high performance.
+      bullets:
+        - Automated system configuration with Puppet and developed custom deployment and verification tools.
+        - Automated documentation and monitoring process, reducing manual effort
+        - Developed custom scripts for system visibility and tested new technologies like RabbitMQ, ELK, and AWS VPC.
 #   - company: Reachlocal.com
 #     title: Systems Administrator (DevOps)
 #     start: 2007
