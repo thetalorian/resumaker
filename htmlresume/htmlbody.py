@@ -1,6 +1,6 @@
 from string import Template
 from models import Resume
-from . import HTMLHistory, HTMLBlock, HTMLSection
+from . import HTMLHistory, HTMLSkills, HTMLBlock, HTMLSection
 
 class HTMLBody(HTMLBlock):
     def __init__(self, resume: Resume):
@@ -45,7 +45,7 @@ $content
         # Right column for Skills and Education
         contentRight = HTMLBlock("column-side")
         skills = HTMLSection("Skills")
-        #skills.addChild(HTMLSkills(resume.skills))
+        skills.addChild(HTMLSkills(self.data.skills))
         contentRight.addChild(skills)
         education = HTMLSection("Education")
         #education.addChild(HTMLEducation(resume.education))

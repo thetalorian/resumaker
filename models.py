@@ -23,3 +23,4 @@ class SkillSet(BaseModel):
 
 class Resume(BaseModel):
     history: list[WorkHistory]
+    skills: list[SkillSet]

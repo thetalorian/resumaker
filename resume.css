@@ -7,6 +7,19 @@
   font-weight: bold;
 }
 
+.section-content {
+  padding-bottom: 15px;
+}
+
+.skillset {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.skillcategory {
+  font-weight: bold;
+}
+
 .workhistory {
   padding-bottom: 10px;
 }
