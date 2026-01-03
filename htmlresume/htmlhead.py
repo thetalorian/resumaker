@@ -10,7 +10,7 @@ class HTMLHead(HTMLBlock):
 """<head>
     <meta $meta>
     <link $link>
-    <title $title>
+    <title>$title</title>
 </head>""")
 
     def __repr__(self) -> str:
