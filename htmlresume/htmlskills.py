@@ -19,7 +19,7 @@ $skills
         for skill in self.skills:
             data = {
                 "category": skill.category,
-                "skills": ", ".join(skill.entries)
+                "skills": self.indent(", ".join(skill.entries), 2)
             }
             output.append(self.template.substitute(data))
         return self.indent("\n".join(output))
