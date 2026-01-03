@@ -1,16 +1,55 @@
 from models import Resume
-from . import HTMLHeader, HTMLHistory
+from . import HTMLHeader, HTMLHistory, HTMLBlock, HTMLSection
 
-class HTMLBody():
+class HTMLBody(HTMLBlock):
     def __init__(self, resume: Resume):
+        super().__init__("body")
         self.data : Resume = resume
-        self.header : HTMLHeader = HTMLHeader()
-        self.history : HTMLHistory = HTMLHistory(resume.history)
+
+        # Configure Layout
+
+        # Info Header
+        header = HTMLBlock("container")
+
+        # Left Column for Name and introduction
+        headerLeft = HTMLBlock("column-main")
+        #personalInfo = HTMLPersonal(resume.personal)
+        #headerLeft.addContent(personalInfo)
+        header.addChild(headerLeft)
+
+        # Right Column for Contact information
+        headerRight = HTMLBlock("column-side")
+        #contactInfo = HTMLContact(resume.contact)
+        #headerRight.addContent(contactInfo)
+        header.addChild(headerRight)
+
+        self.addChild(header)
+
+        # Main Body
+        content = HTMLBlock("container")
+
+        # Left column for work history
+        contentLeft = HTMLBlock("column-main")
+        history = HTMLSection("Professional Experience")
+        history.addChild(HTMLHistory(resume.history))
+        contentLeft.addChild(history)
+        content.addChild(contentLeft)
+
+        # Right column for Skills and Education
+        contentRight = HTMLBlock("column-side")
+        skills = HTMLSection("Skills")
+        #skills.addChild(HTMLSkills(resume.skills))
+        contentRight.addChild(skills)
+        education = HTMLSection("Education")
+        #education.addChild(HTMLEducation(resume.education))
+        contentRight.addChild(education)
+        content.addChild(contentRight)
+        self.addChild(content)
+
 
     def __repr__(self) -> str:
         output = ""
         output += "<body>\n"
-        output += str(self.header)
-        output += str(self.history)
+        output += self.childContent()
         output += "</body>\n"
         return output

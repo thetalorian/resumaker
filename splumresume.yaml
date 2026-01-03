@@ -77,8 +77,7 @@ history:
     start_date: 2023-04-17
     end_date: 2025-08-01
     description:
-      - |
-        Led the development and maintenance of deployment pipelines and infrastructure in Azure Cloud, focusing on microservice deployment and infrastructure automation.
+      - Led the development and maintenance of deployment pipelines and infrastructure in Azure Cloud, focusing on microservice deployment and infrastructure automation.
     bullets:
       - Developed and maintained CI/CD pipelines in Azure DevOps for microservice deployment.
       - Implemented infrastructure as code using Terraform, managing Azure resources.
@@ -89,8 +88,7 @@ history:
     start_date: 2022-01-05
     end_date: 2023-04-11
     description:
-      - |
-        Maintained and improved cloud infrastructure supporting the platform, focusing on high availability, scalability, and automation.
+      - Maintained and improved cloud infrastructure supporting the platform, focusing on high availability, scalability, and automation.
     bullets:
       - Managed AWS resources including EC2, RDS, S3, and EKS clusters.
       - Enhanced infrastructure automation with Terraform, Jenkins, Pulumi, and GitHub Actions.
@@ -100,8 +98,7 @@ history:
     start_date: 2019-06-17
     end_date: 2021-12-15
     description:
-        - |
-          Consolidated and modernized deployment pipeline across multiple business units, adopting GitOps principles.
+        - Consolidated and modernized deployment pipeline across multiple business units, adopting GitOps principles.
     bullets:
         - Unified multiple pipelines into a single system using Kubernetes (EKS) and Terraform.
         - Implemented GitLab for centralized repository management and CI/CD pipelines.
@@ -112,8 +109,7 @@ history:
     start_date: 2024-01-07
     end_date: 2019-03-29
     description:
-      - |
-        Managed a large-scale advertising platform with automation and custom monitoring to ensure high performance.
+      - Managed a large-scale advertising platform with automation and custom monitoring to ensure high performance.
     bullets:
       - Automated system configuration with Puppet and developed custom deployment and verification tools.
       - Automated documentation and monitoring process, reducing manual effort
