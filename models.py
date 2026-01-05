@@ -3,6 +3,11 @@ from pydantic import BaseModel
 from typing import Optional
 
 
+class Personal(BaseModel):
+    name: str
+    introduction: str
+
+
 class WorkHistoryDescription(BaseModel):
     paragraphs: Optional[list[str]] = None
     bullets: Optional[list[str]] = None
@@ -34,6 +39,7 @@ class Education(BaseModel):
 
 
 class Resume(BaseModel):
+    personal: Personal
     history: list[WorkHistory]
     skills: list[SkillSet]
     education: Education

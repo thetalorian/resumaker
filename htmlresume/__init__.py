@@ -1,5 +1,6 @@
 from .htmlblock import HTMLBlock
 from .htmlsection import HTMLSection
+from .htmlintro import HTMLIntro
 from .htmlhistory import HTMLHistory
 from .htmlskills import HTMLSkills
 from .htmleducation import HTMLEducation

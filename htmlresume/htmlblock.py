@@ -2,7 +2,7 @@ from string import Template
 import textwrap
 
 class HTMLBlock():
-    def __init__(self, cssClass: str) -> None:
+    def __init__(self, cssClass: str = "none") -> None:
         self.children: list[HTMLBlock] = []
         self.cssClass : str = cssClass
         self.template : Template = Template(

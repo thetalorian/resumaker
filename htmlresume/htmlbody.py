@@ -1,6 +1,6 @@
 from string import Template
 from models import Resume
-from . import HTMLHistory, HTMLSkills, HTMLEducation, HTMLBlock, HTMLSection
+from . import HTMLIntro, HTMLHistory, HTMLSkills, HTMLEducation, HTMLBlock, HTMLSection
 
 class HTMLBody(HTMLBlock):
     def __init__(self, resume: Resume):
@@ -19,13 +19,12 @@ $content
         header = HTMLBlock("container")
 
         # Left Column for Name and introduction
-        headerLeft = HTMLBlock("column-main")
-        #personalInfo = HTMLPersonal(resume.personal)
-        #headerLeft.addContent(personalInfo)
+        headerLeft = HTMLBlock("header-main")
+        headerLeft.addChild(HTMLIntro(self.data.personal))
         header.addChild(headerLeft)
 
         # Right Column for Contact information
-        headerRight = HTMLBlock("column-side")
+        headerRight = HTMLBlock("header-side")
         #contactInfo = HTMLContact(resume.contact)
         #headerRight.addContent(contactInfo)
         header.addChild(headerRight)
