@@ -8,6 +8,19 @@ class Personal(BaseModel):
     introduction: str
 
 
+class Address(BaseModel):
+    street: str
+    city: str
+    state: str
+    zip: int
+
+
+class Contact(BaseModel):
+    email: str
+    phone: str
+    address: Address
+    link: str
+
 class WorkHistoryDescription(BaseModel):
     paragraphs: Optional[list[str]] = None
     bullets: Optional[list[str]] = None
@@ -40,6 +53,7 @@ class Education(BaseModel):
 
 class Resume(BaseModel):
     personal: Personal
+    contact: Contact
     history: list[WorkHistory]
     skills: list[SkillSet]
     education: Education

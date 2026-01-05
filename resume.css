@@ -23,6 +23,11 @@
   }
 }
 
+.contact {
+  .address, .phone, .email, .link {
+    padding: 4px;
+  }
+}
 
 .skillset {
   padding-top: 5px;

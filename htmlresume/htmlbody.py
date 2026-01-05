@@ -1,6 +1,6 @@
 from string import Template
 from models import Resume
-from . import HTMLIntro, HTMLHistory, HTMLSkills, HTMLEducation, HTMLBlock, HTMLSection
+from . import HTMLIntro, HTMLContact, HTMLHistory, HTMLSkills, HTMLEducation, HTMLBlock, HTMLSection
 
 class HTMLBody(HTMLBlock):
     def __init__(self, resume: Resume):
@@ -25,8 +25,7 @@ $content
 
         # Right Column for Contact information
         headerRight = HTMLBlock("header-side")
-        #contactInfo = HTMLContact(resume.contact)
-        #headerRight.addContent(contactInfo)
+        headerRight.addChild(HTMLContact(self.data.contact))
         header.addChild(headerRight)
 
         self.addChild(header)

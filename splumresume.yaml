@@ -1,14 +1,17 @@
 personal:
   name: Samuel Plum
   title: DevOps Engineer
-  email: splum@taloria.com
-  phone: 310-347-8393
-  link: illustriouskingdom.com
-  address: |
-    8905 Coberdale Ct.
-    Colorado Springs, CO 80920
   introduction: |
     Experienced DevOps Engineer with a strong background in cloud infrastructure, automation, and container orchestration. Skilled in designing scalable, reliable systems using modern tools and practices to optimize deployment pipelines and infrastructure management.
+contact:
+  email: splum@taloria.com
+  phone: 310-347-8393
+  link: https://www.linkedin.com/in/samuelplum/
+  address:
+    street: 8905 Coberdale Ct.
+    city: Colorado Springs
+    state: CO
+    zip: 80920
 skills:
   - category: Scripting and Programming
     entries:
