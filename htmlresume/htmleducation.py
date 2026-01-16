@@ -11,7 +11,6 @@ class HTMLEducation(HTMLBlock):
     <div class="name">$name</div>
     <div class="degree">$degree</div>
     <div class="dates">$dates</div>
-    </div>
 </div>""")
         self.certificateTemplate : Template = Template("<div class=\"certificate\">$certificate</div>"
 )

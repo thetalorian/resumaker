@@ -25,7 +25,7 @@ $description
             data = {}
             data['title'] = item.title
             data['company'] = item.company
-            start = item.start_date.strftime('%m/%d%Y')
+            start = item.start_date.strftime('%m/%d/%Y')
             if not item.end_date:
                 end = "Current"
             else:

@@ -1,37 +1,37 @@
-.body {
-  font-size: 10;
+body {
+  font-size: 0.8rem;;
 }
 
 .section {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .section-content {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .personal {
 
   .name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
   .introduction {
-    padding-bottom: 5px;
+    padding-bottom: 3px;
   }
 }
 
 .contact {
   .address, .phone, .email, .link {
-    padding: 4px;
+    padding: 3px;
   }
 }
 
 .skillset {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .skillcategory {
@@ -39,15 +39,15 @@
 }
 
 .workhistory {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   .title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 
   .company {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .company-name {
@@ -55,7 +55,7 @@
   }
 
   .workperiod {
-    padding-left: 5px;
+    padding-left: 2px;
   }
 }
 
@@ -65,36 +65,37 @@
 
 .certificate {
   font-weight: bold;
+  padding-top: 4px;
 }
 
 .container {
   display: flex; /* Enables flexbox layout for children */
-  gap: 20px; /* Adds space between columns */
+  gap: 15px; /* Adds space between columns */
 }
 
 .header-main {
   flex: 2;
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
 }
 
 .header-side {
   flex: 1; /* Takes 3 parts of available space (e.g., 75%) */
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
 }
 
-
-.column-main {
-  flex: 2;
-  background-color: #fff;
-  padding: 20px;
-}
 
 .column-side {
   flex: 1; /* Takes 3 parts of available space (e.g., 75%) */
   background-color: #eee;
-  padding: 20px;
+  padding: 15px;
+}
+
+.column-main {
+  flex: 3;
+  background-color: #fff;
+  padding: 15px;
 }
 
 @media (max-width: 600px) {

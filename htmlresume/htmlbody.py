@@ -33,14 +33,9 @@ $content
         # Main Body
         content = HTMLBlock("container")
 
-        # Left column for work history
-        contentLeft = HTMLBlock("column-main")
-        history = HTMLSection("Professional Experience")
-        history.addChild(HTMLHistory(self.data.history))
-        contentLeft.addChild(history)
-        content.addChild(contentLeft)
 
-        # Right column for Skills and Education
+
+        # Left column for Skills and Education
         contentRight = HTMLBlock("column-side")
         skills = HTMLSection("Skills")
         skills.addChild(HTMLSkills(self.data.skills))
@@ -49,6 +44,15 @@ $content
         education.addChild(HTMLEducation(self.data.education))
         contentRight.addChild(education)
         content.addChild(contentRight)
+
+        # Right column for work history
+        contentLeft = HTMLBlock("column-main")
+        history = HTMLSection("Professional Experience")
+        history.addChild(HTMLHistory(self.data.history))
+        contentLeft.addChild(history)
+        content.addChild(contentLeft)
+
+
         self.addChild(content)
 
 
