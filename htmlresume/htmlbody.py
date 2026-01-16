@@ -18,40 +18,39 @@ $content
         # Info Header
         header = HTMLBlock("container")
 
-        # Left Column for Name and introduction
-        headerLeft = HTMLBlock("header-main")
-        headerLeft.addChild(HTMLIntro(self.data.personal))
-        header.addChild(headerLeft)
+        # Main Column for Name and introduction
+        main_column = HTMLBlock("header-main")
+        main_column.addChild(HTMLIntro(self.data.personal))
+        header.addChild(main_column)
 
-        # Right Column for Contact information
-        headerRight = HTMLBlock("header-side")
-        headerRight.addChild(HTMLContact(self.data.contact))
-        header.addChild(headerRight)
+        # Side Column for Contact information
+        side_column = HTMLBlock("header-side")
+        side_column.addChild(HTMLContact(self.data.contact))
+        header.addChild(side_column)
 
         self.addChild(header)
+
 
         # Main Body
         content = HTMLBlock("container")
 
-
-
-        # Left column for Skills and Education
-        contentRight = HTMLBlock("column-side")
+        # Side column for Skills and Education
+        side_column = HTMLBlock("column-side")
         skills = HTMLSection("Skills")
         skills.addChild(HTMLSkills(self.data.skills))
-        contentRight.addChild(skills)
+        side_column.addChild(skills)
+
         education = HTMLSection("Education")
         education.addChild(HTMLEducation(self.data.education))
-        contentRight.addChild(education)
-        content.addChild(contentRight)
+        side_column.addChild(education)
+        content.addChild(side_column)
 
-        # Right column for work history
-        contentLeft = HTMLBlock("column-main")
+        # Main column for work history
+        main_column = HTMLBlock("column-main")
         history = HTMLSection("Professional Experience")
         history.addChild(HTMLHistory(self.data.history))
-        contentLeft.addChild(history)
-        content.addChild(contentLeft)
-
+        main_column.addChild(history)
+        content.addChild(main_column)
 
         self.addChild(content)
 
